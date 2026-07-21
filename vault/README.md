@@ -16,12 +16,6 @@ This Obsidian vault is two things layered on top of each other: Rogers Mukiibi's
 - **Purpose**: this is where Rogers actually works day to day. It is not a "posts staging area" — it's a running personal knowledge base covering daily journaling (`Habit3/Daily Notes/`), work notes (`Auri Notes/`, spanning power engineering and the Cetus Engine / Irradiation Portal projects), the `Xeno` AI project, and general life capture (`Random Notes/`).
 - **Format**: messy by design — daily notes, meeting notes, half-formed ideas, letters to self. Blog posts are the rare thing that gets *extracted* from this, not the default output.
 
-## Tagging System
-
-- Every tag in use across the vault is defined in [`drafts/Random Notes/Tags.md`](drafts/Random%20Notes/Tags.md) — treat it as the canonical tag dictionary.
-- Convention: **all tags are lowercase**. Before introducing a new tag, check Tags.md first — reuse an existing one if it fits.
-- Goal: no captured thought should go untagged. When adding a new tag, add its definition to Tags.md in alphabetical order.
-
 ## Writing Workflow
 
 1. **Capture in Drafts**: daily notes, meeting notes, and ideas are captured in `drafts/`, tagged as they're written.
@@ -40,7 +34,7 @@ Each post should have this structure:
 ---
 title: "Your Post Title"
 date: 2025-01-01
-tags: [web-development, javascript]
+tags: [learing]
 excerpt: "Brief description of the post"
 type: blog  # or "learning"
 ---

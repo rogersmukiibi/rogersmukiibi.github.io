@@ -4,7 +4,7 @@ Blog content
 ---
 **Title**: {{title}}
 **Subtitle**: {{subtitle}}
-**Tags**: #web-development #tutorial
+**Tags**: #blog 
 **Date**: {{date}}
 **Type**: blog
 **Status**: draft
