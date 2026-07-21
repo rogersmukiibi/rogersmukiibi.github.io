@@ -21,8 +21,7 @@ That's really the core of it, and it's also why I try to be more tolerant of peo
 So I think we can try to tolerate the people around us, especially in the moments where their views feel like they're pushing against beliefs we already hold dear.
 
 ---
-**Title**: {{Living With Worldviews That Aren't Our Own}}
-**Subtitle**: 
+**Title**: Living With Worldviews That Aren't Our Own
 **Tags**: #lifenote 
 **Date**: 2026-07-21
 **Type**: blog
