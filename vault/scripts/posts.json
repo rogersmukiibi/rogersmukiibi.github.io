@@ -14,6 +14,13 @@
     "type": "blog"
   },
   {
+    "id": "Falling in love with Quirk",
+    "title": "Falling in love with Quirk",
+    "date": "20250904",
+    "excerpt": "I've been stuck in tutorial hell with quantum computing for a while. I knew the gates, I knew how they worked on paper, ...",
+    "type": "learning"
+  },
+  {
     "id": "Living With Worldviews That Aren't Our Own",
     "title": "Living With Worldviews That Aren't Our Own",
     "date": "2026-07-21",
