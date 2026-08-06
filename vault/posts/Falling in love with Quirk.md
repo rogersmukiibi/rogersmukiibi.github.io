@@ -10,8 +10,8 @@ The future looks exciting.
 
 ---
 **Title**: Falling in love with Quirk
-**Tags**: #learning #quantum #qubitboard
-**Date**: 20250904
+**Tags**: #learning #quantum #qubitboard #blog 
+**Date**: 2026-08-06
 **Type**: learning
 **Status**: post
 ---

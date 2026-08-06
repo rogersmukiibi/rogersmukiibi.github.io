@@ -1,12 +1,5 @@
 [
   {
-    "id": "20260303",
-    "title": "20260303",
-    "date": "2026-03-03",
-    "excerpt": "{{subtitle}}",
-    "type": "learning"
-  },
-  {
     "id": "Blank again",
     "title": "Blank Again",
     "date": "2025-07-27",
@@ -16,8 +9,15 @@
   {
     "id": "Falling in love with Quirk",
     "title": "Falling in love with Quirk",
-    "date": "20250904",
+    "date": "2026-08-06",
     "excerpt": "I've been stuck in tutorial hell with quantum computing for a while. I knew the gates, I knew how they worked on paper, ...",
+    "type": "learning"
+  },
+  {
+    "id": "imagine",
+    "title": "imagine",
+    "date": "2026-03-03",
+    "excerpt": "{{subtitle}}",
     "type": "learning"
   },
   {
@@ -39,6 +39,13 @@
     "title": "Shower thoughts 1",
     "date": "2025-12-12",
     "excerpt": "001",
+    "type": "learning"
+  },
+  {
+    "id": "20260303",
+    "title": "20260303",
+    "date": "2026-03-03",
+    "excerpt": "{{subtitle}}",
     "type": "learning"
   }
 ]

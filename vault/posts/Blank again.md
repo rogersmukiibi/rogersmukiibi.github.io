@@ -11,7 +11,7 @@ Anyway, the blog is in a very bad shape, most links are not working but here we 
 ---
 **Title**: Blank Again
 **Subtitle**: Back to my blank pages
-**Tags**: #first
+**Tags**: #first #blog 
 **Date**: 2025-07-27
 **Type**: blog
 **Status**: post

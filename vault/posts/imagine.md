@@ -3,7 +3,7 @@ if news is fake
 imagine history
 
 ---
-**Title**: 20260303
+**Title**: imagine
 **Subtitle**: {{subtitle}}
 **Tags**: #showerthoughts 
 **Date**: 2026-03-03
