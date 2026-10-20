@@ -539,8 +539,8 @@ class BlogManager {
         const recentPostsContainer = document.getElementById('recent-posts-container');
         if (!recentPostsContainer) return;
         
-        // Show 3 most recent blog posts
-        const recentPosts = this.posts.slice(0, 3);
+        // Show the most recent blog post
+        const recentPosts = this.posts.slice(0, 1);
         const postsHTML = recentPosts.map(post => this.createPostCard(post)).join('');
         recentPostsContainer.innerHTML = postsHTML;
     }
@@ -584,8 +584,11 @@ class BlogManager {
                 <nav>
                     <ul>
                         <li><a href="index.html">Mukiibi</a></li>
+                        <li><a href="research.html">Research</a></li>
                         <li><a href="blog.html">Blog</a></li>
-                        <li><a href="learning.html">Learning</a></li>
+                        <li><a href="tutorials.html">Tutorials</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="community.html">Community</a></li>
                         <li><a href="life-clock.html">Life</a></li>
                         <li class="theme-toggle-item">
                             <label for="theme-toggle" class="theme-switch" aria-label="Toggle dark mode">

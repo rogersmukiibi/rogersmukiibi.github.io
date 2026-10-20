@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research - Rogers Mukiibi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Mukiibi</a></li>
+                <li><a href="research.html" class="active">Research</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="life-clock.html">Life</a></li>
+                <li class="theme-toggle-item">
+                    <label for="theme-toggle" class="theme-switch" aria-label="Toggle dark mode">
+                        <input type="checkbox" id="theme-toggle" class="theme-toggle" role="switch" aria-label="Toggle dark mode">
+                        <span class="theme-slider" aria-hidden="true"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Research</h1>
+            <p>Power systems, AI for energy, and sensing in the field.</p>
+        </section>
+
+        <section>
+            <h2>Publications</h2>
+            <div class="entry">
+                <p class="entry-meta">2026 &middot; IEEE Access (Early Access)</p>
+                <h3><a href="https://doi.org/10.1109/ACCESS.2026.3709045" target="_blank">A Smart IoT-enabled Multimodal System for Honeybee Keepers in Uganda</a></h3>
+                <p class="entry-authors">A. Turyagyenda, A. Katumba, R. Akol, M. Nsabagwa, M. E. Mkiramweni, <strong>R. Mukiibi</strong></p>
+                <p>A field-deployed hive monitor combining temperature, humidity, weight, and vibration sensing. I designed the sensor PCB and the accelerometer pipeline that reads colony activity from FFTs of hive vibrations.</p>
+                <p class="entry-links">
+                    <a href="https://doi.org/10.1109/ACCESS.2026.3709045" target="_blank">paper</a> /
+                    <a href="assets/IOTra_Portfolio.pdf" target="_blank">hardware notes</a>
+                </p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Research projects</h2>
+            <div class="entry">
+                <p class="entry-meta">2024&ndash;present &middot; Marconi Machine Learning Lab</p>
+                <h3><a href="https://marconilab.org/research/projects/16/" target="_blank">Unbiased AI Models for Solar Irradiance in Rural Africa</a></h3>
+                <p class="entry-authors">Dr J. Mikelson, Dr A. Katumba, <strong>R. Mukiibi</strong>, C. Nyakairu, N. W. Jenifer</p>
+                <p>Satellite estimates of solar irradiance run high over Uganda, and that bias flows straight into the cost of solar projects. We combine NASA POWER, CAMS, and MERRA-2 data with ground stations to correct it, and serve bias-corrected irradiance for any location and date in Sub-Saharan Africa.</p>
+                <p class="entry-links">
+                    <a href="https://irradiation-portal-prod-55883164704.europe-west1.run.app/portal" target="_blank">portal</a> /
+                    <a href="https://github.com/Marconi-Lab/SolarIrradiation" target="_blank">code (SuSSE)</a> /
+                    <a href="https://marconilab.org/research/projects/16/" target="_blank">project page</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026</p>
+    </footer>
+
+    <script src="script.js?v=20260408"></script>
+</body>
+</html>

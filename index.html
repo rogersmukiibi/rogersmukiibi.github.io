@@ -4,78 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rogers Mukiibi</title>
+    <meta name="description" content="Rogers Mukiibi: electrical engineer working on power systems, AI for energy, and quantum computing.">
     <link rel="stylesheet" href="styles.css">
     <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
 </head>
-<body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html" class="active">Mukiibi</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="learning.html">Learning</a></li>
-                <li><a href="life-clock.html">Life</a></li>
-                <li class="theme-toggle-item">
-                    <label for="theme-toggle" class="theme-switch" aria-label="Toggle dark mode">
-                        <input type="checkbox" id="theme-toggle" class="theme-toggle" role="switch" aria-label="Toggle dark mode">
-                        <span class="theme-slider" aria-hidden="true"></span>
-                    </label>
-                </li>
-            </ul>
-        </nav>
-    </header>
+<body class="home">
+    <div class="home-toggle">
+        <label for="theme-toggle" class="theme-switch" aria-label="Toggle dark mode">
+            <input type="checkbox" id="theme-toggle" class="theme-toggle" role="switch" aria-label="Toggle dark mode">
+            <span class="theme-slider" aria-hidden="true"></span>
+        </label>
+    </div>
 
     <main>
-        <section class="hero">
-            <h1>Welcome to this corner of the internet</h1>
-            <div class="bio">
-                <p>Hi! I'm <strong>Rogers Mukiibi</strong>. </p>
+        <section class="intro">
+            <h1 class="intro-name">Rogers Mukiibi</h1>
+            <p>
+                I'm an electrical engineer and Associate R&amp;D Power Systems Engineer at
+                <a href="https://www.aurienergy.com/" target="_blank">Auri Energy</a>, where I model distribution
+                networks, study power quality, and help build digital twins of the grid. I studied Electrical
+                Engineering at <a href="https://mak.ac.ug/" target="_blank">Makerere University</a>.
+            </p>
+            <p>
+                Before that I was a research assistant at the
+                <a href="https://www.marconilab.org/" target="_blank">Marconi Machine Learning Lab</a>, building
+                AI models to estimate solar irradiation across Uganda with GIZ and the Ministry of Energy, and an
+                intern at the <a href="https://iot-ra.net/" target="_blank">IoT-RA Lab</a>, where I designed the
+                hardware for a smart beehive monitor. These days I'm also working on quantum computing: applying
+                QUBO and QAOA formulations to distribution network control, and building tools that make
+                circuits easier to see.
+            </p>
+            <p class="intro-links">
+                <a href="mailto:mukiibirogerz@gmail.com">Email</a> /
+                <a href="assets/Rogers_Mukiibi_CV.pdf" target="_blank">CV</a> /
+                <a href="https://www.linkedin.com/in/rogers-mukiibi-3a0162230/" target="_blank">LinkedIn</a> /
+                <a href="https://github.com/rogersmukiibi" target="_blank">GitHub</a> /
+                <a href="https://orcid.org/0009-0005-7884-3600" target="_blank">ORCID</a> /
+                <a href="https://X.com/rogerzmukiibi" target="_blank">X</a>
+            </p>
+            <p class="intro-interests">
+                Power systems &middot; AI for energy &middot; Quantum computing &middot; Embedded systems
+            </p>
+            <nav class="section-nav" aria-label="Site">
+                <a href="research.html">Research</a>
+                <a href="blog.html">Blog</a>
+                <a href="tutorials.html">Tutorials</a>
+                <a href="projects.html">Projects</a>
+                <a href="community.html">Community</a>
+                <a href="life-clock.html">Life</a>
+            </nav>
+        </section>
+
+        <section class="overview">
+            <div class="overview-head">
+                <h2>Latest research</h2>
+                <a href="research.html">All research &rarr;</a>
+            </div>
+            <div class="entry">
+                <p class="entry-meta">2026 &middot; IEEE Access (Early Access)</p>
+                <h3><a href="https://doi.org/10.1109/ACCESS.2026.3709045" target="_blank">A Smart IoT-enabled Multimodal System for Honeybee Keepers in Uganda</a></h3>
+                <p>A field-deployed hive monitor combining temperature, humidity, weight, and vibration sensing.</p>
             </div>
         </section>
 
-        <section class="recent-posts">
-            <h2>Recent Posts</h2>
+        <section class="overview">
+            <div class="overview-head">
+                <h2>Latest post</h2>
+                <a href="blog.html">All posts &rarr;</a>
+            </div>
             <div id="recent-posts-container">
-                <!-- Recent posts will be loaded here by JavaScript -->
+                <!-- The newest post is loaded here by JavaScript -->
             </div>
         </section>
 
-        <section class="quick-links">
-            <h2>Quick Links</h2>
-            <div class="links">
-                <a href="learning.html" class="link-card">
-                    <h3>Things I'm Learning</h3>
-                    <p>Current topics and skills I'm exploring</p>
-                </a>
+        <section class="overview">
+            <div class="overview-head">
+                <h2>Latest tutorial</h2>
+                <a href="tutorials.html">All tutorials &rarr;</a>
+            </div>
+            <div class="entry">
+                <p class="entry-meta">2026 &middot; Quantum computing</p>
+                <h3><a href="post.html?id=Falling%20in%20love%20with%20Quirk">Falling in love with Quirk</a></h3>
+                <p>Getting out of tutorial hell by dragging gates around and watching the state change.</p>
             </div>
         </section>
-        <section class="about">
-            <h2>Find Me</h2>
-            <div class="contact-info">
-                    <div class="contact-links">
-                        <a href="mailto:mukiibirogerz@gmail.com" class="contact-link">
-                            <span>Email</span>
-                        </a>
-                        <a href="https://X.com/rogerzmukiibi" target="_blank" class="contact-link">
-                            <span>X </span>
-                        </a>
-                        <a href="https://linkedin.com/in/rogers-mukiibi-3a0162230" target="_blank" class="contact-link">
-                            <span>LinkedIn</span>
-                        </a>
-                    </div>
-                    <div class="cv-link">
-                        <a href="assets/Rogers_Mukiibi_CV.pdf" target="_blank" class="cv-button">
-                            <span>Download CV (PDF)</span>
-                        </a>
-                    </div>
-                </div>
     </main>
 
     <footer>
-        <p>&copy; 2026</p>
+        <p>Thanks for stopping by. &copy; 2026</p>
     </footer>
 
     <script src="script.js?v=20260408"></script>

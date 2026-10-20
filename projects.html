@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Rogers Mukiibi</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon_io/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon_io/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon_io/apple-touch-icon.png">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Mukiibi</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="tutorials.html">Tutorials</a></li>
+                <li><a href="projects.html" class="active">Projects</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="life-clock.html">Life</a></li>
+                <li class="theme-toggle-item">
+                    <label for="theme-toggle" class="theme-switch" aria-label="Toggle dark mode">
+                        <input type="checkbox" id="theme-toggle" class="theme-toggle" role="switch" aria-label="Toggle dark mode">
+                        <span class="theme-slider" aria-hidden="true"></span>
+                    </label>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <h1>Projects</h1>
+            <p>Things I've built, from circuit boards and server racks to chatbots and quantum toys. Each group lists the most recently updated first.</p>
+        </section>
+
+        <section class="project-group">
+            <h2>Still running</h2>
+            <p class="project-group-note">Live, maintained, and (mostly) working.</p>
+            <a class="project" href="https://github.com/rogersmukiibi/rogersmukiibi.github.io" target="_blank">
+                <span class="project-head"><span class="project-name">This website</span><span class="status status-live">live</span></span>
+                <span class="project-meta">Updated Oct 2026 &middot; HTML/CSS/JS</span>
+                <span class="project-desc">Plain HTML, CSS, and a little JavaScript. Posts are written in Markdown.</span>
+            </a>
+            <a class="project" href="https://rogersmukiibi.com/QubitBoard/" target="_blank">
+                <span class="project-head"><span class="project-name">QubitBoard</span><span class="status status-live">live</span></span>
+                <span class="project-meta">Updated Oct 2026 &middot; JavaScript</span>
+                <span class="project-desc">A drag-and-drop simulator for circuits of up to 16 qubits, built on Craig Gidney&rsquo;s Quirk. Its code panel turns a circuit into Cirq or OpenQASM 3 and back.</span>
+            </a>
+            <a class="project" href="https://irradiation-portal-prod-55883164704.europe-west1.run.app/portal" target="_blank">
+                <span class="project-head"><span class="project-name">Solar Irradiation Portal</span><span class="status status-live">live</span></span>
+                <span class="project-meta">Updated Aug 2026 &middot; Marconi Lab</span>
+                <span class="project-desc">Bias-corrected solar irradiance for any location and date in Sub-Saharan Africa, served from SuSSE, the open-source correction library behind it.</span>
+            </a>
+            <a class="project" href="https://github.com/rogersmukiibi/clarke_park_transform_rust" target="_blank">
+                <span class="project-head"><span class="project-name">Clarke &amp; Park Visualizer</span><span class="status status-live">live</span></span>
+                <span class="project-meta">Updated Jul 2026 &middot; Rust</span>
+                <span class="project-desc">A desktop app that animates three-phase signals through abc &rarr; &alpha;&beta;0 &rarr; dq0 so the transforms finally make sense.</span>
+            </a>
+            <a class="project" href="life-clock.html">
+                <span class="project-head"><span class="project-name">Life in Weeks</span><span class="status status-live">live</span></span>
+                <span class="project-meta">Updated Apr 2026 &middot; HTML/JS</span>
+                <span class="project-desc">A clock of every week lived and every week left.</span>
+            </a>
+        </section>
+
+        <section class="project-group">
+            <h2>On the workbench</h2>
+            <p class="project-group-note">Being built right now.</p>
+            <a class="project" href="https://vu-gpt.com" target="_blank">
+                <span class="project-head"><span class="project-name">VU-GPT</span><span class="status status-building">building</span></span>
+                <span class="project-meta">Updated Oct 2026 &middot; Victoria University, Kampala</span>
+                <span class="project-desc">An agentic RAG chatbot that answers student and staff questions by routing across university documents, FAQs, structured data, the library, and web search.</span>
+            </a>
+            <div class="project">
+                <span class="project-head"><span class="project-name">365 Laws</span><span class="status status-building">building</span></span>
+                <span class="project-meta">Updated Oct 2026 &middot; Book</span>
+                <span class="project-desc">Laws of human nature and mental models, one for every day of the year.</span>
+            </div>
+        </section>
+
+        <section class="project-group">
+            <h2>Past work</h2>
+            <p class="project-group-note">Finished, handed over, or quietly retired. Still proud of them.</p>
+            <a class="project" href="https://github.com/rogersmukiibi/Xeno_bot" target="_blank">
+                <span class="project-head"><span class="project-name">Xeno Bot</span><span class="status status-past">past</span></span>
+                <span class="project-meta">Updated Apr 2026 &middot; Xeno Investments</span>
+                <span class="project-desc">A RAG chatbot for customer questions, with ChromaDB search, intent routing to skip the LLM when it isn't needed, and swappable embedding models.</span>
+            </a>
+            <a class="project" href="https://github.com/rogersmukiibi/CMP3_pyranometer_setup" target="_blank">
+                <span class="project-head"><span class="project-name">Pyranometer Data Logger</span><span class="status status-past">past</span></span>
+                <span class="project-meta">Updated Sep 2025 &middot; Marconi Lab</span>
+                <span class="project-desc">Ground-truth solar irradiance from a CMP3 pyranometer and a Raspberry Pi, logged every 30 seconds.</span>
+            </a>
+            <a class="project" href="assets/IOTra_Portfolio.pdf" target="_blank">
+                <span class="project-head"><span class="project-name">Smart Beehive PCB</span><span class="status status-past">past</span></span>
+                <span class="project-meta">Updated Mar 2024 &middot; IoT-RA Lab</span>
+                <span class="project-desc">Turned a jumper-wire sensor prototype into a field-ready 2-layer PCB, cutting assembly from hours to 20 minutes.</span>
+            </a>
+            <div class="project">
+                <span class="project-head"><span class="project-name">E-waste Server Cluster</span><span class="status status-past">past</span></span>
+                <span class="project-meta">Updated Aug 2023 &middot; netLabs!UG</span>
+                <span class="project-desc">Proxmox clusters built from discarded hardware, running heavy design software in Docker for students without powerful laptops.</span>
+            </div>
+        </section>
+
+        <section class="project-group">
+            <h2>Hacked together for fun</h2>
+            <p class="project-group-note">Weekend builds and learning experiments.</p>
+            <a class="project" href="https://github.com/rogersmukiibi/calc_vhdl" target="_blank">
+                <span class="project-head"><span class="project-name">VHDL Calculator</span><span class="status status-hack">hack</span></span>
+                <span class="project-meta">Updated Apr 2026 &middot; VHDL</span>
+                <span class="project-desc">A calculator described in hardware.</span>
+            </a>
+            <a class="project" href="https://github.com/rogersmukiibi/Zindi_PM2.5P-prediction" target="_blank">
+                <span class="project-head"><span class="project-name">PM2.5 Prediction</span><span class="status status-hack">hack</span></span>
+                <span class="project-meta">Updated Apr 2024 &middot; Python</span>
+                <span class="project-desc">Predicting air quality for a Zindi challenge.</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026</p>
+    </footer>
+
+    <script src="script.js?v=20260408"></script>
+</body>
+</html>
