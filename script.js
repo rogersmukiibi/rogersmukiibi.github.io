@@ -1,7 +1,12 @@
 // Theme manager
 class ThemeManager {
     constructor() {
-        this.theme = localStorage.getItem('theme') || 'light';
+        this.theme = 'light';
+        try {
+            this.theme = localStorage.getItem('theme') || 'light';
+        } catch (error) {
+            // Storage blocked (privacy settings): fall back to the light theme rather than stopping the script
+        }
         this.init();
     }
     
@@ -35,7 +40,11 @@ class ThemeManager {
     
     toggleTheme() {
         this.theme = this.theme === 'dark' ? 'light' : 'dark';
-        localStorage.setItem('theme', this.theme);
+        try {
+            localStorage.setItem('theme', this.theme);
+        } catch (error) {
+            // The choice just won't be remembered
+        }
         this.applyTheme();
     }
 }
