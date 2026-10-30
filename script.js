@@ -630,9 +630,15 @@ class BlogManager {
         }
     }
     
+    needsPosts() {
+        if (this.currentPage === 'home') return !!document.getElementById('recent-posts-container');
+        return ['blog', 'learning', 'post'].includes(this.currentPage);
+    }
+
     async init() {
         try {
-            if (this.currentPage !== 'life' && this.currentPage !== 'calculate') {
+            // Only pages that show posts wait for posts.json; the rest report content-ready straight away
+            if (this.needsPosts()) {
                 await this.loadPosts();
             }
 
