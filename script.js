@@ -631,29 +631,34 @@ class BlogManager {
     }
     
     async init() {
-        if (this.currentPage !== 'life' && this.currentPage !== 'calculate') {
-            await this.loadPosts();
-        }
-        
-        switch (this.currentPage) {
-            case 'home':
-                await this.renderHomePage();
-                break;
-            case 'blog':
-                await this.renderBlogPage();
-                break;
-            case 'learning':
-                await this.renderLearningPage();
-                break;
-            case 'post':
-                await this.renderPostPage();
-                break;
-            case 'life':
-                await this.renderLifeClockPage();
-                break;
-            case 'calculate':
-                await this.renderCalculatePage();
-                break;
+        try {
+            if (this.currentPage !== 'life' && this.currentPage !== 'calculate') {
+                await this.loadPosts();
+            }
+
+            switch (this.currentPage) {
+                case 'home':
+                    await this.renderHomePage();
+                    break;
+                case 'blog':
+                    await this.renderBlogPage();
+                    break;
+                case 'learning':
+                    await this.renderLearningPage();
+                    break;
+                case 'post':
+                    await this.renderPostPage();
+                    break;
+                case 'life':
+                    await this.renderLifeClockPage();
+                    break;
+                case 'calculate':
+                    await this.renderCalculatePage();
+                    break;
+            }
+        } finally {
+            // Tell transition.js the page's text is in place, so it can fly the letters in
+            document.dispatchEvent(new Event('content-ready'));
         }
     }
 }
