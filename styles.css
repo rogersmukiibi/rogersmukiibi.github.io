@@ -29,6 +29,8 @@
 
 html {
     background: var(--bg-color);
+    /* Same content width with or without a scrollbar, so text doesn't shift between pages (or as posts load) */
+    scrollbar-gutter: stable;
 }
 
 body {
@@ -79,6 +81,7 @@ html.tx-entering body > :not(.bloch-backdrop):not(.tx-canvas) {
 /* While the canvas draws the letters, the real text is invisible but keeps its layout */
 html.tx-text-off body * {
     -webkit-text-fill-color: transparent !important;
+    text-decoration-color: transparent !important;
 }
 
 /* Header and Navigation */
