@@ -13,6 +13,7 @@
     --border-color: #d9d9d5;
     --border-hover: #bcbcb8;
     --code-bg: #f1f1ee;
+    --accent: #1a7f37;
 }
 
 [data-theme="dark"] {
@@ -23,6 +24,11 @@
     --border-color: #3a3a3a;
     --border-hover: #5a5a5a;
     --code-bg: #232323;
+    --accent: #3fb950;
+}
+
+html {
+    background: var(--bg-color);
 }
 
 body {
@@ -30,11 +36,22 @@ body {
     line-height: 1.75;
     font-size: 19px;
     color: var(--text-color);
-    background: var(--bg-color);
     max-width: 760px;
     margin: 0 auto;
     padding: 28px 20px 40px;
-    transition: background-color 0.15s ease, color 0.15s ease;
+    transition: color 0.15s ease;
+}
+
+/* Bloch sphere backdrop (drawn by backdrop.js), faded behind the text column */
+.bloch-backdrop {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(50% - 470px), rgba(0, 0, 0, 0.1) calc(50% - 330px), rgba(0, 0, 0, 0.1) calc(50% + 330px), #000 calc(50% + 470px));
+    mask-image: linear-gradient(to right, #000 calc(50% - 470px), rgba(0, 0, 0, 0.1) calc(50% - 330px), rgba(0, 0, 0, 0.1) calc(50% + 330px), #000 calc(50% + 470px));
 }
 
 /* Header and Navigation */
@@ -977,4 +994,15 @@ footer {
     .year-weeks {
         gap: var(--week-gap);
     }
+}
+
+/* The one touch of colour: whichever colour most of the backdrop's qubits show (backdrop.js updates --accent live) */
+.intro-name,
+main h1 {
+    color: var(--accent);
+}
+
+main a[href]:hover,
+footer a[href]:hover {
+    color: var(--accent);
 }
