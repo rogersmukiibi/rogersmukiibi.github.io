@@ -56,6 +56,11 @@ body {
     mask-image: linear-gradient(to right, #000 calc(50% - 470px), rgba(0, 0, 0, 0.1) calc(50% - 330px), rgba(0, 0, 0, 0.1) calc(50% + 330px), #000 calc(50% + 470px));
 }
 
+/* The Effects button turns the backdrop and the page transitions off */
+html[data-effects="off"] .bloch-backdrop {
+    display: none;
+}
+
 /* Page transitions (transition.js): text breaks into glowing bits and reassembles on the next page */
 .tx-canvas {
     position: fixed;
@@ -964,6 +969,32 @@ footer {
     text-align: left;
     color: var(--text-lighter);
     font-size: 0.9em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 6px 20px;
+}
+
+/* The footer's effects button (script.js): turns the backdrop and page transitions off or back on */
+.effects-toggle {
+    padding: 0;
+    border: 0;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline dotted;
+    text-underline-offset: 0.2em;
+    cursor: pointer;
+}
+
+.effects-toggle:hover {
+    color: var(--accent);
+}
+
+.effects-toggle:focus-visible {
+    outline: 2px solid var(--text-lighter);
+    outline-offset: 2px;
 }
 
 /* Responsive */

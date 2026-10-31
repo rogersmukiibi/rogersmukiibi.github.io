@@ -80,10 +80,15 @@ class BlochBackdrop {
             this.readTheme();
             this.renderNow();
         }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-        this.reduceMotion.addEventListener('change', () => {
-            if (this.raf) cancelAnimationFrame(this.raf);
-            this.frame(performance.now());
-        });
+        // The Effects button (script.js) sets data-effects; styles.css hides the canvas while it's off
+        new MutationObserver(() => this.restart())
+            .observe(document.documentElement, { attributes: true, attributeFilter: ['data-effects'] });
+        this.reduceMotion.addEventListener('change', () => this.restart());
+    }
+
+    restart() {
+        if (this.raf) cancelAnimationFrame(this.raf);
+        this.frame(performance.now());
     }
 
     // Deterministic pseudo-random number in [0, 1) so the board looks the same on every page
@@ -456,6 +461,11 @@ class BlochBackdrop {
 
     frame(now) {
         this.raf = null;
+        // Switched off: stop drawing, and leave the page its default accent
+        if (document.documentElement.getAttribute('data-effects') === 'off') {
+            document.documentElement.style.removeProperty('--accent');
+            return;
+        }
         if (this.reduceMotion.matches) {
             document.documentElement.style.removeProperty('--accent');
             this.render(Date.now() / 1000, false);

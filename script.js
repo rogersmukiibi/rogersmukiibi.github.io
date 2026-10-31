@@ -52,6 +52,53 @@ class ThemeManager {
 // Initialize theme manager
 const themeManager = new ThemeManager();
 
+// Effects manager: the button that turns the backdrop and page transitions on or off.
+// transition.js reads the saved choice into data-effects before the page paints.
+class EffectsManager {
+    constructor() {
+        this.init();
+    }
+
+    init() {
+        this.updateButton();
+        this.bindToggle();
+    }
+
+    enabled() {
+        return document.documentElement.getAttribute('data-effects') !== 'off';
+    }
+
+    bindToggle() {
+        const button = document.querySelector('.effects-toggle');
+        if (!button) return;
+
+        button.onclick = () => this.toggleEffects();
+    }
+
+    updateButton() {
+        const button = document.querySelector('.effects-toggle');
+        if (button) {
+            button.textContent = this.enabled() ? 'Scrap the effects' : 'Try effects again';
+            button.title = this.enabled()
+                ? 'Turn off the backdrop and page transitions'
+                : 'Turn on the backdrop and page transitions';
+        }
+    }
+
+    toggleEffects() {
+        const effects = this.enabled() ? 'off' : 'on';
+        try {
+            localStorage.setItem('effects', effects);
+        } catch (error) {
+            // The choice just won't be remembered
+        }
+        document.documentElement.setAttribute('data-effects', effects);
+        this.updateButton();
+    }
+}
+
+const effectsManager = new EffectsManager();
+
 // Simple markdown parser
 class MarkdownParser {
     constructor() {
@@ -622,14 +669,16 @@ class BlogManager {
             </main>
             
             <footer>
-                <p>&copy; 2026</p>
+                <p>Thanks for stopping by. &copy; 2026</p>
+                <button type="button" class="effects-toggle">Scrap the effects</button>
             </footer>
         `;
         
         document.body.innerHTML = postHTML;
         
-        // Re-initialize theme manager for the new page
+        // Re-initialize theme and effects managers for the new page
         themeManager.init();
+        effectsManager.init();
         
         // Load and render the markdown content
         const content = await this.loadMarkdownContent(postId);

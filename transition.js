@@ -11,22 +11,41 @@ class PageTransition {
         this.metricsCache = new Map();
         this.state = null;
 
+        // The visitor's Effects button (script.js) turns the backdrop and these transitions off.
+        // This script runs first, so it marks <html> before the first paint for both of them.
+        let effects = 'on';
+        try {
+            effects = localStorage.getItem('effects') === 'off' ? 'off' : 'on';
+        } catch (error) {
+            // Storage blocked: effects stay on
+        }
+        document.documentElement.setAttribute('data-effects', effects);
+
         if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
         this.handoff = this.takeHandoff();
-        document.documentElement.classList.add('tx-entering');
+        if (this.enabled()) {
+            document.documentElement.classList.add('tx-entering');
+            document.addEventListener('DOMContentLoaded', () => this.arrive());
+        }
         document.addEventListener('content-ready', () => { this.contentReady = true; });
-
-        document.addEventListener('DOMContentLoaded', () => this.arrive());
         document.addEventListener('click', (event) => this.onClick(event));
         window.addEventListener('pageshow', (event) => {
             if (event.persisted) this.finish();
         });
-        // A theme switch mid-flight would leave the canvas letters in the old colours, so just show the page
-        new MutationObserver(([record]) => {
-            const changed = record.oldValue !== document.documentElement.getAttribute('data-theme');
-            if (changed && this.state && this.state.mode === 'assemble') this.finish();
-        }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'], attributeOldValue: true });
+        // A theme switch mid-flight would leave the canvas letters in the old colours, so just show the page.
+        // Turning effects off does the same, unless the page is already dissolving towards the next one.
+        new MutationObserver((records) => {
+            for (const record of records) {
+                if (record.oldValue === document.documentElement.getAttribute(record.attributeName) || !this.state) continue;
+                const modes = record.attributeName === 'data-effects' ? ['hold', 'assemble'] : ['assemble'];
+                if (modes.includes(this.state.mode)) this.finish();
+            }
+        }).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme', 'data-effects'], attributeOldValue: true });
+    }
+
+    enabled() {
+        return document.documentElement.getAttribute('data-effects') !== 'off';
     }
 
     takeHandoff() {
@@ -306,6 +325,7 @@ class PageTransition {
     // ---- leaving a page ----
 
     onClick(event) {
+        if (!this.enabled()) return;
         if (event.defaultPrevented || event.button !== 0 || event.metaKey || event.ctrlKey || event.shiftKey || event.altKey) return;
         const link = event.target.closest('a[href]');
         if (!link || link.target === '_blank' || link.hasAttribute('download')) return;
